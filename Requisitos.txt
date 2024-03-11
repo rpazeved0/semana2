@@ -1,0 +1,18 @@
+A Pro Books precisa de um cadastro de autores, assim, ela poderá gerenciar melhor esse grupo de informações e listar por exemplo, todos os livros de um determinado autor em seu site, entre outras coisa.
+
+Para cadastrar um autor, precisamos do seu nome, e-mail e uma biografia pequena. Além disso, o sistema precisa registrar a data do cadastro desse autor. Com isso temos:
+
+Nome do autor: não pode ser vazio.
+E-mail do autor: não pode ser vazio e precisa ser um e-mail válido.
+Biografia: não pode ser vazio e precisa ter entre 100 e 500 caracteres de texto.
+Data do cadastro: Data/Hora do dia do cadastro do autor no sistema, (essa informação o sistema não precisa pedir ao usuário).
+Dito isso, escreva uma função em um arquivo chamado cadastraAutor.ts que realiza o cadastro desse autor no sistema validando e imprimindo as mensagens de erro caso aconteçam.
+
+OBS 1: Não precisamos de uma interface, apenas executar o arquivo no terminal já é o suficiente.
+
+OBS 2: Separe o código que faz o cadastro do código que executa o cadastro, pode ficar no mesmo arquivo, mas é interessante que possa ser em um arquivo diferente como executaCadastroAutor.ts
+
+OBS 3: Para validar o e-mail, você pode usar alguma biblioteca de terceiros instalada via npm.
+
+
+Nosso sistema também precisa listar os autores, dito isso escreva um outro arquivo chamado listaAutores.ts que busca todos os autores no sistema e exibe seu nome e a data do seu cadastro.
