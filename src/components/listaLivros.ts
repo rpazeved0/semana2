@@ -1,14 +1,12 @@
-import Conta from "../types/GravaLivro.js";
-import { FormatoData } from "../types/FormatoData.js";
+import GravaLivros from "../types/GravaLivro.js";
 import { GrupoTransacao } from "../types/GrupoTransacao.js";
-import { formatarData } from "../utils/formatters.js";
 
-const elementoRegistroTransacoesExtrato: HTMLElement = document.querySelector(".extrato .registro-transacoes");
+const elementoRegistroCadastroLivro: HTMLElement = document.querySelector(".extrato .registro-transacoes");
 
-renderizarExtrato();
-function renderizarExtrato(): void {
-    const gruposTransacoes: GrupoTransacao[] = Conta.getGruposTransacoes();
-    elementoRegistroTransacoesExtrato.innerHTML = "";
+renderizarLivros();
+function renderizarLivros(): void {
+    const gruposTransacoes: GrupoTransacao[] = GravaLivros.getGruposTransacoes();
+    elementoRegistroCadastroLivro.innerHTML = "";
     let htmlRegistroTransacoes: string = "";
 
     for (let grupoTransacao of gruposTransacoes)
@@ -37,12 +35,12 @@ function renderizarExtrato(): void {
         htmlRegistroTransacoes = "<div>Não há livros cadastrados.</div>";
     }
 
-    elementoRegistroTransacoesExtrato.innerHTML = htmlRegistroTransacoes;
+    elementoRegistroCadastroLivro.innerHTML = htmlRegistroTransacoes;
 }
 
 const ListarLivros = {
     atualizar(): void {
-        renderizarExtrato();
+        renderizarLivros();
     }
 }
 export default ListarLivros;

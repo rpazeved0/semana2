@@ -1,7 +1,7 @@
 import Conta from "../types/GravaCategoria.js";
 const elementoRegistroTransacoesExtrato = document.querySelector(".extrato .registro-transacoes");
-renderizarExtrato();
-function renderizarExtrato() {
+renderizarCategotias();
+function renderizarCategotias() {
     const gruposTransacoes = Conta.getGruposTransacoes();
     elementoRegistroTransacoesExtrato.innerHTML = "";
     let htmlRegistroTransacoes = "";
@@ -26,7 +26,7 @@ function renderizarExtrato() {
 }
 const Listar = {
     atualizar() {
-        renderizarExtrato();
+        renderizarCategotias();
     }
 };
 export default Listar;

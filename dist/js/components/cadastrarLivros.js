@@ -29,19 +29,19 @@ elementoFormulario.addEventListener("submit", function (event) {
         let autor = inputAutor.value;
         let dataatual = new Date();
         if (publicacao <= dataatual) {
-            alert("A Data de Publicação deve ser maior que a data atual!");
+            alert("Data da publicação deve ser maior que a data atual!");
             return;
         }
         if (paginas <= 0) {
-            alert("O campo Páginas deve ser maior que zero!");
+            alert("As Páginas deve ser maior que zero!");
             return;
         }
         if (sumario.length < 100) {
-            alert("O campo Sumario deve ter no mínimo 100 caracteres!");
+            alert("O Sumario deve ter no mínimo 100 caracteres!");
             return;
         }
         else if ((sinopse.length > 500)) {
-            alert("O campo Sinopse deve ter no máximo 500 caracteres!");
+            alert("Sinopse deve ter no máximo 500 caracteres!");
             return;
         }
         if (ValidarISBN(isbn)) {

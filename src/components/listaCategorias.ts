@@ -3,8 +3,8 @@ import { GrupoCategoria } from "../types/GrupoCategoria.js";
 
 const elementoRegistroTransacoesExtrato: HTMLElement = document.querySelector(".extrato .registro-transacoes");
 
-renderizarExtrato();
-function renderizarExtrato(): void {
+renderizarCategotias();
+function renderizarCategotias(): void {
     const gruposTransacoes: GrupoCategoria[] = Conta.getGruposTransacoes();
     elementoRegistroTransacoesExtrato.innerHTML = "";
     let htmlRegistroTransacoes: string = "";
@@ -36,7 +36,7 @@ function renderizarExtrato(): void {
 
 const Listar = {
     atualizar(): void {
-        renderizarExtrato();
+        renderizarCategotias();
     }
 }
 export default Listar;

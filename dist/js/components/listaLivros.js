@@ -1,9 +1,9 @@
-import Conta from "../types/GravaLivro.js";
-const elementoRegistroTransacoesExtrato = document.querySelector(".extrato .registro-transacoes");
-renderizarExtrato();
-function renderizarExtrato() {
-    const gruposTransacoes = Conta.getGruposTransacoes();
-    elementoRegistroTransacoesExtrato.innerHTML = "";
+import GravaLivros from "../types/GravaLivro.js";
+const elementoRegistroCadastroLivro = document.querySelector(".extrato .registro-transacoes");
+renderizarLivros();
+function renderizarLivros() {
+    const gruposTransacoes = GravaLivros.getGruposTransacoes();
+    elementoRegistroCadastroLivro.innerHTML = "";
     let htmlRegistroTransacoes = "";
     for (let grupoTransacao of gruposTransacoes) {
         let htmlTransacaoItem = "";
@@ -25,11 +25,11 @@ function renderizarExtrato() {
     if (htmlRegistroTransacoes === "") {
         htmlRegistroTransacoes = "<div>Não há livros cadastrados.</div>";
     }
-    elementoRegistroTransacoesExtrato.innerHTML = htmlRegistroTransacoes;
+    elementoRegistroCadastroLivro.innerHTML = htmlRegistroTransacoes;
 }
 const ListarLivros = {
     atualizar() {
-        renderizarExtrato();
+        renderizarLivros();
     }
 };
 export default ListarLivros;
